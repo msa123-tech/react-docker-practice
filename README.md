@@ -1,16 +1,48 @@
-# React + Vite
+# React Docker Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application created using Vite and Docker. The purpose of this project was to understand how React applications can be containerized and run inside Docker containers.
 
-Currently, two official plugins are available:
+Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* React
+* Vite
+* Docker
 
-## React Compiler
+Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Make sure Docker Desktop is installed and running on your machine.
 
-## Expanding the ESLint configuration
+# Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Make sure Docker Desktop is installed and running on your machine.
+
+Check Docker installation:
+docker --version
+docker ps
+
+git clone https://github.com/msa123-tech/react-docker-practice.git
+cd react-docker-practice
+
+Build the Docker Image
+
+Run the following command from the project root directory:
+
+docker build -t react-docker-practice .
+
+Run the Docker Container
+
+docker run --name react-docker-container -p 5173:5173 react-docker-practice
+
+Access the Application
+
+Open your browser and visit:
+http://localhost:5173
+
+What I Learned
+
+* Creating a React application using Vite
+* Writing a Dockerfile for a frontend application
+* Building Docker images
+* Running applications inside Docker containers
+* Port mapping between host machine and container
+* Basic Docker container management commands
